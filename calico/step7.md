@@ -15,7 +15,7 @@ spec:
     - from:
       - podSelector:
           matchLabels:
-            run: access
+            run: client
 EOF
 `{{execute}}
 

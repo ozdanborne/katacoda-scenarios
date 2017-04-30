@@ -7,6 +7,8 @@ apiVersion: v1
 metadata:
   name: client
   namespace: policy-demo
+  labels:
+    run: client
 spec:
   containers:
   - name: busybox
@@ -19,6 +21,5 @@ EOF
 
 
 `
-kubectl exec -n policy-demo client --
-wget -T 2 -q nginx  -O -
+kubectl exec -n policy-demo client -- wget -T 2 -q nginx  -O -
 `{{execute}}
