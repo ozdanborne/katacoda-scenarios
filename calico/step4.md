@@ -1,12 +1,6 @@
-Each node in the cluster requires a running proxy server. The proxy is responsibility for managing communications by modifying the IPTables of the host machine. It also handles load balancing of traffic between containers on a host.
+Create some nginx pods in the policy-demo Namespace, and expose them through a Service.
 
 `
-docker run -d --name=proxy\
-    --net=host \
-    --privileged \
-    gcr.io/google_containers/hyperkube:v1.1.2 \
-    /hyperkube proxy \
-    --master=http://0.0.0.0:8080 --v=2
+kubectl run --namespace=policy-demo nginx --replicas=2 --image=nginx
+kubectl expose --namespace=policy-demo deployment nginx --port=80
 `{{execute}}
-
-The _master_ option is the HTTP of where the Master is running.

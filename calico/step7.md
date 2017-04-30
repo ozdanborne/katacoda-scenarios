@@ -1,10 +1,20 @@
-Kubernetes has a UI that can be used to visualize the state of the cluster, similar to Kubectl.
-
-Like with the DNS service, the UI also runs inside the cluster.
+Allow Access using a Network Policy.
 
 `
-kubectl create -f ~/kube-ui-rc.yaml
-kubectl create -f ~/kube-ui-svc.yaml
+kubectl create -f - <<EOF
+kind: NetworkPolicy
+apiVersion: extensions/v1beta1
+metadata:
+  name: access-nginx
+  namespace: policy-demo
+spec:
+  podSelector:
+    matchLabels:
+      run: nginx
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+            run: access
+EOF
 `{{execute}}
-
-After a few moments you will be able to visit the UI on port 8080 with the URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ui/

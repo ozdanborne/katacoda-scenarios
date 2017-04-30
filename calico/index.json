@@ -6,35 +6,35 @@
     "details": {
         "steps": [
             {
-                "title": "Step 1 - Etcd",
+                "title": "Prerequisite: Base Image",
                 "text": "step1.md"
             },
             {
-                "title": "Step 2 - API Server",
+                "title": "Install Calico",
                 "text": "step2.md"
             },
             {
-                "title": "Step 3 - Master",
+                "title": "Step 1 - Create Namespace",
                 "text": "step3.md"
             },
             {
-                "title": "Step 4 - Proxy",
+                "title": "Step 2 - Launch Pods",
                 "text": "step4.md"
             },
             {
-                "title": "Step 5 - Kubectl",
+                "title": "Step 3 - Try Access",
                 "text": "step5.md"
             },
             {
-                "title": "Step 6 - KubeDNS / SkyDNS",
+                "title": "Step 4 - Enable Isolation",
                 "text": "step6.md"
             },
             {
-                "title": "Step 7 - Kube UI",
+                "title": "Step 5 - Allow Access",
                 "text": "step7.md"
             },
             {
-                "title": "Step 8 - Health Checks",
+                "title": "Step 7 - Try Access",
                 "text": "step8.md"
             }
         ],
