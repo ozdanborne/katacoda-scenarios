@@ -18,3 +18,7 @@ spec:
             run: access
 EOF
 `{{execute}}
+
+`
+kubectl exec -n policy-demo client -- wget -q nginx  -T 2 -O -
+`{{execute}}
