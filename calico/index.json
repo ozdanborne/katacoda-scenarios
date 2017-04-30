@@ -45,10 +45,18 @@
         },
         "finish": {
             "text": "finish.md"
+        },
+        "assets": {
+          "host01": [
+            {
+              "file": "pod.yaml",
+              "target": "~/"
+            }
+          ]
         }
     },
     "files": [
-        "app.js"
+        "pod.yaml"
     ],
     "environment": {
         "uilayout": "terminal-editor",
