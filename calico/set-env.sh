@@ -1,1 +1,1 @@
-export KUBECONFIG=/etc/kubernetes/admin.conf
+# export KUBECONFIG=/etc/kubernetes/admin.conf
