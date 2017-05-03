@@ -1,1 +1,1 @@
-# export KUBECONFIG=/etc/kubernetes/admin.conf
+launch.sh

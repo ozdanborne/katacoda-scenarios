@@ -1,3 +1,1 @@
-# export KUBECONFIG=/etc/kubernetes/admin.conf
-docker pull quay.io/calico/node:v1.1.3
-docker pull quay.io/calico/cni:v1.7.0
+ssh root@host01 'for i in {1..200}; do kubeadm init --token=96771a.f608976060d16396 > /opt/kubeadm-logs; sudo cp /etc/kubernetes/admin.conf /root/.kube/config && break || sleep 1; done; for i in {1..200}; do kubectl taint nodes --all node-role.kubernetes.io/master- && break || sleep 1; done; docker pull quay.io/calico/node:v1.1.3; docker pull quay.io/calico/cni:v1.7.0; docker pull quay.io/calico/kube-policy-controller:v0.5.4'
