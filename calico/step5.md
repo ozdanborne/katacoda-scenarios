@@ -1,23 +1,6 @@
 The kubectl is the command line client used to communicate with the Master.
 
-`
-kubectl create -f - <<EOF
-kind: Pod
-apiVersion: v1
-metadata:
-  name: client
-  namespace: policy-demo
-  labels:
-    run: client
-spec:
-  containers:
-  - name: busybox
-    image: busybox
-    args:
-    - sleep
-    - "10000"
-EOF
-`{{execute}}
+`kubectl create -f pod.yaml`{{execute}}
 
 
 `
