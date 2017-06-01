@@ -1,4 +1,4 @@
-Next, annotate the policy-demo namespace to deny all incoming (ingress) traffic using the `kubectl annotate` command:
+Next, annotate the policy-demo namespace to deny all incoming (ingress) traffic using the _kubectl annotate_ command:
 
 `
 kubectl annotate ns policy-demo "net.beta.kubernetes.io/network-policy={\"ingress\":{\"isolation\":\"DefaultDeny\"}}"
