@@ -2,7 +2,7 @@ Finally, we'll allow access to the pod by applying the network-policy.yaml file.
 
 You can view the contents of the network-policy.yaml file using `vi network-policy.yaml` and then `(escape) q` to exit the text editor.
 
-Apply the network-policy.yaml file using the `kubectl create` command with the `-f` flag:
+Apply the network-policy.yaml file using the _kubectl create_ command with the _-f_ flag:
 
 `kubectl create -f network-policy.yaml`{{execute}}
 
