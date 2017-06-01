@@ -10,5 +10,5 @@ Apply the network-policy.yaml file using the _kubectl create_ command with the _
 
 Now, using our network-policy.yaml file we just applied, we should be allowing incoming traffic to pods running nginx.  We can test this using the following command:
 
-kubectl exec -n policy-demo client -- wget -q nginx  -T 2 -O -
+`kubectl exec -n policy-demo client -- wget -q nginx  -T 2 -O -
 `{{execute}}
